@@ -13,10 +13,8 @@ main.use(bodyParser.json());
 
 export const webApi = functions.https.onRequest(main);
 
-app.get('/warmup', (request, response) => {
-
-    response.send('Warming up friend.');
-
+app.get('/', (request, response) => {
+    response.send('Welcome to the api');
 })
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
